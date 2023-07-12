@@ -1,11 +1,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-
+const cors = require("cors");
 const db = require("./db");
 const userRoutes = require("./routes/userRoutes");
 const app = express();
 const port = 3333;
-
+app.use(cors());
 //middleware
 app.use(bodyParser.json());
 app.use(express.json());
